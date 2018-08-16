@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 @media(min-width:768px){
@@ -129,4 +129,148 @@ input[type=text]:focus {
   border: 1px solid;
   border-radius: 6px;
   width:76% !important;
+} */
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+body{
+  background-color: #EDEFF1;
+}
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.slider1,.slider2 {
+  width: 95%;
+}
+
+.overall{
+  font-size: 13px;
+  font-weight: 600;
+  color: #5E6062;
+}
+
+.card .card-content .overallc2{
+  font-size: 13px;
+  font-weight: 600;
+  color: #5E6062;
+  margin-bottom: 13px;
+}
+
+.card {
+  /* box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); */
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-clip: padding-box;
+  background-color: #FFFFFF;
+}
+.card span.card-title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-image img {
+  border-radius: 2px 2px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+}
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+.card .card-action a {
+  color: #ffab40;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none;
+}
+
+.card .card-content .ib1{
+  display: inline-block;
+  background-color: #FD655D;
+  color: #FFFFFF;
+  border-right: solid #FFFFFF;
+}
+.card .card-content .ib2{
+  display: inline-block;
+  background-color: #5AD5DD;
+  color: #FFFFFF;
+  border-right: solid #FFFFFF;
+}
+.card .card-content .ib3{
+  display: inline-block;
+  background-color: #FEBA38;
+  color: #FFFFFF;
+  border-right: solid #FFFFFF;
+}
+.card .card-content .ib4{
+  display: inline-block;
+  background-color: #9E5BF2;
+  color: #FFFFFF;
 }
