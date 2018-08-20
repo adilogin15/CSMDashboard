@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BarChart from "react-svg-bar-chart"
 const data = []
  
-for (let x = 1; x <= 30; x++) {
+for (let x = 1; x <= 4; x++) {
     data.push({x: x, y: Math.floor(Math.random() * 100)})
 }
 
@@ -14,14 +14,13 @@ class Bar extends Component {
     render() {
       return (
         <div className="app"><br/>
-          <div id="chart-container"><h2>Bar Chart</h2></div><br/>
           <BarChart data={data} onHover={this.handlePointHover} areaColor="#44B39D"
   areaVisible={true}
   axisColor="#34495e"
   axisOpacity={0.3}
   axisVisible={true}
   axisWidth={1}
-  barsColor="#44B39D"
+  barsColor="#008bcf"
   barsMargin={0.1}
   barsOpacity={1}
   gridColor="#34495e"

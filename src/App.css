@@ -7,13 +7,16 @@ body{
     width: 160px;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: -14px;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
     padding-top: 20px;
 }
-
+.App{
+  margin-top: 40px;
+  width: 100%;
+}
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
@@ -22,15 +25,29 @@ body{
     display: block;
 }
 
-.sidenav a:hover {
-    color: #f1f1f1;
+.sidenav a:hover,.sidenav a:active   {
+  color: #FFF;
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
 }
 
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
-    font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
 }
+@media(max-width:767px){
+  .main {
+    margin-left: 0; 
+}
+.visible-xs{
+  display:block;
+}
+.hidden-xs{
+  display:none;
+}
+}
+
+
 
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -90,10 +107,19 @@ body{
   padding: 16px;
 }
 .card .card-content {
-  padding: 16px;
+  padding: 20px 16px;
   border-radius: 0 0 2px 2px;
   background-clip: padding-box;
   box-sizing: border-box;
+}
+.CTO .card-content{
+  padding-bottom:0;
+}
+.CTO .card-content p{
+  padding-bottom:20px;
+}
+.CTO .card-content .cluster{
+  padding-bottom:0;
 }
 .card .card-content p {
   margin: 0;
@@ -116,27 +142,57 @@ body{
   color: #ffd8a6;
   text-decoration: none;
 }
-
-.card .card-content .ib1{
+.card .card-content .ib1 ,.card .card-content .ib2,.card .card-content .ib3,.card .card-content .ib4{
   display: inline-block;
-  background-color: #FD655D;
   color: #FFFFFF;
   border-right: solid #FFFFFF;
+  padding:20px;
+}
+.card .card-content .ib1 .progress ,.card .card-content .ib2 .progress,.card .card-content .ib3 .progress,.card .card-content .ib4 .progress{
+  width:70%;
+}
+.card .card-content .ib1 .maxProgress ,.card .card-content .ib2 .maxProgress,.card .card-content .ib3 .maxProgress,.card .card-content .ib4 .maxProgress{
+  right:18px;
+}
+.card .card-content .ib1{
+  background-color: #FD655D;
 }
 .card .card-content .ib2{
-  display: inline-block;
   background-color: #5AD5DD;
-  color: #FFFFFF;
-  border-right: solid #FFFFFF;
 }
 .card .card-content .ib3{
-  display: inline-block;
   background-color: #FEBA38;
-  color: #FFFFFF;
-  border-right: solid #FFFFFF;
 }
 .card .card-content .ib4{
-  display: inline-block;
   background-color: #9E5BF2;
-  color: #FFFFFF;
+}
+.progress-bar.active, .progress.active .progress-bar {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
+.progress{
+  width: 90%;
+  margin: 0 auto;
+  max-height:4px;
+}
+.minProgress{
+  position: relative;
+  top: 12px;
+  font-size: 14px;
+}
+.maxProgress{
+  position: absolute;
+  top: 43px;
+  right: 30px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  padding: 0px;
+  padding-top: 9px;
+  padding-left: 2px;
+  background: rgba(218, 223, 218, 0.4);
+  font-weight:bold;
 }
